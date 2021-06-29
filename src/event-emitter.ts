@@ -15,8 +15,8 @@ export class EventEmitter<TMap extends DefaultEventMap = DefaultEventMap>
    * @param _throwLimitError - Throw error if max listeners is added.
    */
   constructor(
+    public readonly eventNames: Array<keyof TMap>,
     public readonly maxListeners = Infinity,
-    public readonly eventNames: (keyof TMap)[] = [],
     private readonly throwLimitError = false
   ) {}
 
