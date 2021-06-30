@@ -3,8 +3,26 @@
   "version": "0.0.1",
   "author": "Ikrom Alizoda <ikrom.develop@gmail.com>",
   "description": "Tiny Event Emitter",
-  "keywords": ["event-emitter", "typescript"],
+  "homepage": "https://github.com/aintts/event-emitter#readme",
+  "keywords": [
+    "types",
+    "ts",
+    "typescript",
+    "events",
+    "eventemitter",
+    "event-listener",
+    "eventlistener",
+    "listener",
+    "emit"
+  ],
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aintts/event-emitter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/aintts/event-emitter/issues"
+  },
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "module": "dist/event-emitter.esm.js",
@@ -16,6 +34,8 @@
     "start": "tsdx watch",
     "build": "tsdx build",
     "test": "tsdx test",
+    "test:watch": "tsdx test --watch",
+    "test:coverage": "tsdx test --coverage",
     "lint": "tsdx lint",
     "prepare": "tsdx build",
     "size": "size-limit",
