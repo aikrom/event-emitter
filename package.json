@@ -1,6 +1,6 @@
 {
   "name": "@aintts/event-emitter",
-  "version": "0.0.1",
+  "version": "0.1.1",
   "author": "Ikrom Alizoda <ikrom.develop@gmail.com>",
   "description": "Tiny Event Emitter",
   "homepage": "https://github.com/aintts/event-emitter#readme",
