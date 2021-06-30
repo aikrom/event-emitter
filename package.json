@@ -1,6 +1,6 @@
 {
   "name": "@aintts/event-emitter",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "author": "Ikrom Alizoda <ikrom.develop@gmail.com>",
   "description": "Tiny Event Emitter",
   "homepage": "https://github.com/aintts/event-emitter#readme",
@@ -22,6 +22,9 @@
   },
   "bugs": {
     "url": "https://github.com/aintts/event-emitter/issues"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
