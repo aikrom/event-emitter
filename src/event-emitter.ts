@@ -21,16 +21,16 @@ export class EventEmitter<TMap extends DefaultEventMap = DefaultEventMap>
   ) {}
 
   public hasListeners<TKey extends keyof TMap = string>(event: TKey) {
-    return this.eventListeners[event] && !!this.eventListeners[event].length;
+    return event in this.eventListeners && !!this.eventListeners[event].length;
   }
 
   public checkListenersLimit<TKey extends keyof TMap>(event: TKey) {
     const inLimit =
       this.maxListeners !== Infinity &&
-      this.maxListeners === this.eventListeners[event].length;
+      this.maxListeners <= this.eventListeners[event].length;
 
     if (this.throwLimitError && !inLimit) {
-      throw new Error(`Maximum event listeners for "${event}" event!`);
+      throw new Error(`Maximum event listeners for "${event}" event.`);
     }
 
     return inLimit;
