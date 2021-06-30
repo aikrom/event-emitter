@@ -23,6 +23,9 @@
   "bugs": {
     "url": "https://github.com/aintts/event-emitter/issues"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "module": "dist/event-emitter.esm.js",
