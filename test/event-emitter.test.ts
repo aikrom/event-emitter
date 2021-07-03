@@ -18,6 +18,15 @@ describe('EventEmitter', () => {
     expect(eventEmitter.eventNames.length).toBe(1);
   });
 
+  it('should emit without crash if no listeners was defined', () => {
+    const eventEmitter = new EventEmitter<{
+      create: () => void;
+    }>(['create']);
+    expect(eventEmitter.emit('create')).toBeFalsy();
+    expect(eventEmitter.listenerCount('create')).toBe(0);
+    expect(eventEmitter.eventNames.length).toBe(1);
+  });
+
   it('should add multiple listers and emit', () => {
     const eventEmitter = new EventEmitter<{
       create: () => void;

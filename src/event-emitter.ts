@@ -40,7 +40,7 @@ export class EventEmitter<TMap extends DefaultEventMap = DefaultEventMap>
     event: TKey,
     ...args: Parameters<TMap[TKey]>
   ) {
-    this.eventListeners[event].forEach(listener => {
+    this.eventListeners[event]?.forEach(listener => {
       listener(...args);
     });
 
